@@ -12,10 +12,8 @@
   ],
   "author": "renkun",
   "license": "ISC",
-  "devDependencies": {
-    "gulp-sass": "^3.1.0"
-  },
   "dependencies": {
+    "gulp-sass": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.4.0",

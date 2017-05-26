@@ -1,0 +1,188 @@
+/**
+ *	padding margin height width line
+ *
+ *
+ * 
+ */
+
+@import "variables.scss";
+
+.f_tal{text-align: left;}
+.f_tar{text-align: right;}
+.f_tac{text-align: center;}
+
+/* position
+******************************/
+.f_posr{ position:relative;}
+.f_posa{ position:absolute;}
+.f_left{ float:left;}
+.f_right{ float:right;}
+.f_hide{position:absolute !important; height:1px; width:1px; overflow:hidden;clip:rect(1px, 1px, 1px, 1px);}
+.f_none{ display:none !important;}
+
+/* display
+******************************/
+.f_inline{ display:inline;}
+.f_block{ display:block;}
+.f_inline-block{ display:inline-block;}
+.f_table{ display:table;}
+.f_table-cell{ display:table-cell;}
+
+.f_ofh{ overflow:hidden;}
+.f_ofs{ overflow:scroll;}
+.f_ofa{ overflow:auto;}
+
+.f_clr{clear:both;overflow: hidden;}
+
+.f_vam,.f_vama *{vertical-align:middle;}
+.f_wsn{word-wrap:normal;white-space:nowrap;}
+.f_pre{overflow:hidden;text-align:left;white-space:pre-wrap;word-wrap:break-word;word-break:break-all;}
+.f_wwb{white-space:normal;word-wrap:break-word;word-break:break-all;}
+.f_ellipsis{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/* 鼠标样式
+******************************/
+.f_csp{cursor:pointer;}
+.f_csd{cursor:default;}
+.f_csh{cursor:help;}
+.f_csm{cursor:move;}
+.f_csw{cursor:wait;}
+
+.f_tdu,.f_tdu:hover{text-decoration:underline;}
+.f_tdn,.f_tdn:hover{text-decoration:none;}
+
+/* font-weight
+******************************/
+.f_fwb{ font-weight: bold;}
+.f_fwn{ font-weight: normal;}
+.f_fwl{ font-weight: lighter;}
+
+/* z_index
+******************************/
+.f_z0{ z-index: $zindex-0;}
+.f_z1{ z-index: $zindex-1;}
+.f_z2{ z-index: $zindex-2;}
+.f_z3{ z-index: $zindex-3;}
+.f_z4{ z-index: $zindex-4;}
+
+/* 圆角
+******************************/
+.f_bdrn{ border-radius:0 }
+.f_bdr50{border-radius: 50%;}
+.f_bdr2{border-radius: 2px;}
+.f_bdr4{border-radius: 4px;}
+
+
+/*字体
+******************************/
+.f_fs10{font-size: 10px;}
+.f_fs12{font-size: 12px;}
+.f_fs14{font-size: 14px;}
+.f_fs16{font-size: 16px;}
+.f_fs18{font-size: 18px;}
+.f_fs24{font-size: 24px;}
+.f_fs28{font-size: 28px;}
+
+
+/* color
+******************************/
+.f_primary {color: $primary-color;}
+.f_primary_dark {color: $primary-color-dark;}
+.f_primary_light {color: $primary-color-light;}
+
+.f_secondary {color: $secondary-color;}
+.f_secondary_dark {color: $secondary-color-dark;}
+.f_secondary_light {color: $secondary-color-light;}
+
+.f_gray_a{color:$dark-color;}
+.f_gray_b{color:$gray-color-dark;}
+.f_gray_c{color:$gray-color;}
+.f_gray_d{color:$gray-color-light;}
+
+/*背景颜色
+******************************/
+.f_bgc{background-color: $bg-color;}
+.f_bgc_dark{background-color: $bg-color-dark;}
+.f_bgc_whight{background-color: $bg-color-light;}
+
+.f_bgc_primary {background-color: $primary-color;}
+.f_bgc_secondary {background-color: $secondary-color;}
+
+.f_bgc_a{background-color: $dark-color;}
+.f_bgc_b{background-color: $gray-color-dark;}
+.f_bgc_c{background-color: $gray-color;}
+.f_bgc_d{background-color: $gray-color-light;}
+
+.f_suc{background-color: $control-color-success;color: #fff;}
+.f_warn{background-color: $control-color-warning;color: #fff;}
+.f_err{background-color: $control-color-error;color: #fff;}
+
+/* 边框
+******************************/
+.f_bd{border: 1px solid $border-color;}
+.f_bdt{border-top: 1px solid $border-color;}
+.f_bdr{border-right: 1px solid $border-color;}
+.f_bdb{border-bottom: 1px solid $border-color;}
+.f_bdl{border-left: 1px solid $border-color;}
+.f_bdx{border-right: 1px solid $border-color;border-left: 1px solid $border-color;}
+.f_bdy{border-bottom: 1px solid $border-color;border-top: 1px solid $border-color;}
+.f_bdn{ border:0 }
+.f_bdcd{border-color: $border-color-dark !important;}/*颜色较深的边框*/
+
+
+/* 位置
+******************************/
+@for $i from 0 through 10 { 
+	.f_pos_t#{$i * 5} {top: 5px * $i;}
+	.f_pos_r#{$i * 5} {right: 5px * $i;}
+	.f_pos_b#{$i * 5} {bottom: 5px * $i;}
+	.f_pos_l#{$i * 5} {left: 5px * $i;}
+}
+
+/* 内边距
+******************************/
+@for $i from 0 through 10 { 
+	.f_mt#{$i * 5} {margin-top: 5px * $i;}
+	.f_mr#{$i * 5} {margin-right: 5px * $i;}
+	.f_mb#{$i * 5} {margin-bottom: 5px * $i;}
+	.f_ml#{$i * 5} {margin-left: 5px * $i;}
+}
+
+/* 外边距
+******************************/
+@for $i from 0 through 10 { 
+	.f_pt#{$i * 5} {padding-top: 5px * $i;}
+	.f_pr#{$i * 5} {padding-right: 5px * $i;}
+	.f_pb#{$i * 5} {padding-bottom: 5px * $i;}
+	.f_pl#{$i * 5} {padding-left: 5px * $i;}
+}
+
+
+/* 宽度
+******************************/
+@for $i from 1 through 10 { 
+	.f_w#{$i * 10} {display: inline-block;width: 10px * $i !important;}
+}
+
+@for $i from 1 through 10 { 
+	.f_w#{100 + $i * 20} {display: inline-block;width: 100px + 20px * $i !important;}
+}
+
+@for $i from 1 through 10 { 
+	.f_w#{300 + $i * 50} {display: inline-block;width: 300px + 50px * $i !important;}
+}
+
+
+/* height
+******************************/
+@for $i from 4 through 20 { 
+	.f_h#{$i * 5} {height: 5px * $i !important;}
+}
+
+
+/* height == line-height
+******************************/
+@for $i from 0 through 10 { 
+	.f_line#{18 + 2 * $i} {height: 18px + 2px * $i !important; line-height: 18px + 2px * $i !important;}
+}
+
